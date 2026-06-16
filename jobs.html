@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+Jobs - WorkerConnect
+</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<header>
+
+<div class="logo">
+WorkerConnect
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="dashboard.html">
+Dashboard
+</a>
+
+<a href="login.html">
+Login
+</a>
+
+</nav>
+
+</header>
+
+<section class="jobs-section">
+
+<h2 class="section-title">
+
+Available Jobs
+
+</h2>
+
+<div class="job-grid" id="jobContainer">
+
+</div>
+
+</section>
+
+<section class="post-job">
+
+<div class="auth-box">
+
+<h2>Post New Job</h2>
+
+<form id="jobForm">
+
+<input
+type="text"
+id="jobTitle"
+placeholder="Job Title"
+required
+>
+
+<input
+type="text"
+id="jobLocation"
+placeholder="Location"
+required
+>
+
+<input
+type="text"
+id="jobBudget"
+placeholder="Budget"
+required
+>
+
+<textarea
+id="jobDescription"
+placeholder="Job Description"
+required
+></textarea>
+
+<button
+type="submit"
+class="btn primary"
+>
+Post Job
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<script src="js/jobs.js"></script>
+
+</body>
+</html>

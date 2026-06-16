@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Test Supabase</h2>
+<button onclick="test()">Click me</button>
+
+<pre id="result"></pre>
+
+<script type="module">
+import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
+
+const supabaseUrl = "https://flnilikriozyjvkpzuve.supabase.co";
+const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZsbmlsaWtyaW96eWp2a3B6dXZlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA5MjU3MTMsImV4cCI6MjA5NjUwMTcxM30.8xnBN20Vf1hh7zRRqa2zBd0o8j8hsYifw8Xe7yaDii4";
+
+const supabase = createClient(supabaseUrl, supabaseKey);
+
+window.test = async function () {
+  const { data, error } = await supabase.from("test").select("*");
+
+  document.getElementById("result").innerText =
+    JSON.stringify({ data, error }, null, 2);
+};
+</script>
+
+</body>
+</html>

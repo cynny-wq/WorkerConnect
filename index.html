@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WorkerConnect</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+
+<div class="logo">
+WorkerConnect
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="jobs.html">Jobs</a>
+<a href="login.html">Login</a>
+<a href="register.html">Register</a>
+<a href="dashboard.html">Dashboard</a>
+<a href="payments.html">Revenue</a>
+<a href="admin.html">Admin</a>
+</nav>
+<button id="darkModeBtn" class="btn primary">
+  🌙 Dark Mode
+</button>
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Find Skilled Workers Near You</h1>
+
+<p>
+Connect with trusted workers and employers across Kenya.
+</p>
+
+<a href="jobs.html" class="btn primary">
+Browse Jobs
+</a>
+
+</div>
+
+</section>
+<section class="dashboard">
+
+<h2 class="section-title">
+Revenue Dashboard
+</h2>
+<h2>Supabase Insert Test</h2>
+
+<input id="name" placeholder="Enter name" />
+<button onclick="addData()">Save</button>
+
+<button onclick="loadData()">Load Data</button>
+
+<pre id="result"></pre>
+
+<div class="stats">
+
+<div class="stat-card">
+<h2 id="totalRevenue">
+KES 0
+</h2>
+<p>Total Revenue</p>
+</div>
+
+<div class="stat-card">
+<h2 id="premiumRevenue">
+KES 0
+</h2>
+<p>Premium Revenue</p>
+</div>
+
+<div class="stat-card">
+<h2 id="featuredRevenue">
+KES 0
+</h2>
+<p>Featured Revenue</p>
+</div>
+
+<div class="stat-card">
+<h2 id="totalPayments">
+0
+</h2>
+<p>Payments</p>
+</div>
+
+</div>
+
+<div id="paymentContainer">
+
+</div>
+
+</section>
+<button
+class="btn primary"
+onclick="clearPayments()"
+>
+Clear Revenue Records
+</button>
+
+</section>
+
+<section class="workers">
+
+<h2 class="section-title">
+Featured Workers
+</h2>
+
+<div class="worker-grid" id="workerContainer">
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+WorkerConnect © 2026
+</p>
+
+</footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/workers.js"></script>
+<script src="js/app.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

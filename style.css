@@ -1,0 +1,594 @@
+/* ==========================
+   GLOBAL STYLES
+========================== */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#f5f7fb;
+  color:#222;
+  line-height:1.6;
+}
+
+a{
+  text-decoration:none;
+}
+
+img{
+  max-width:100%;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 8%;
+  background:#fff;
+  box-shadow:0 2px 10px rgba(0,0,0,0.08);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+body.dark{
+  background:#111827;
+  color:white;
+}
+
+body.dark header,
+body.dark .worker-card,
+body.dark .job-card,
+body.dark .auth-box,
+body.dark .stat-card{
+  background:#1f2937;
+  color:white;
+}
+
+body.dark nav a{
+  color:white;
+}
+
+body.dark input,
+body.dark textarea,
+body.dark select{
+  background:#374151;
+  color:white;
+  border:1px solid #4b5563;
+}
+
+body.dark .hero-content p{
+  color:#d1d5db;
+}
+
+.logo{
+  font-size:28px;
+  font-weight:700;
+  color:#2563eb;
+}
+
+nav{
+  display:flex;
+  gap:20px;
+  align-items:center;
+}
+
+nav a{
+  color:#333;
+  font-weight:500;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#2563eb;
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.btn{
+  display:inline-block;
+  padding:14px 26px;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.primary{
+  background:#2563eb;
+  color:white;
+}
+
+.primary:hover{
+  background:#1d4ed8;
+}
+
+/* ==========================
+   HERO
+========================== */
+
+.hero{
+  min-height:80vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:40px 8%;
+}
+
+.hero-content h1{
+  font-size:58px;
+  margin-bottom:20px;
+}
+
+.hero-content p{
+  max-width:700px;
+  margin:auto;
+  margin-bottom:30px;
+  color:#666;
+}
+
+/* ==========================
+   SECTIONS
+========================== */
+
+.section-title{
+  text-align:center;
+  font-size:40px;
+  margin-bottom:40px;
+}
+
+.workers,
+.jobs-section,
+.dashboard{
+  padding:80px 8%;
+}
+
+/* ==========================
+   DASHBOARD STATS
+========================== */
+
+.stats{
+  padding:50px 8%;
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+.stat-card{
+  background:white;
+  padding:35px;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0 6px 20px rgba(0,0,0,0.08);
+}
+
+.stat-card h2{
+  font-size:40px;
+  color:#2563eb;
+  margin-bottom:10px;
+}
+
+/* ==========================
+   WORKER GRID
+========================== */
+
+.worker-grid{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+}
+
+.worker-card{
+  background:white;
+  border-radius:20px;
+  padding:30px;
+  text-align:center;
+  box-shadow:0 6px 20px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.worker-card:hover{
+  transform:translateY(-8px);
+}
+
+.worker-image{
+  width:100px;
+  height:100px;
+  margin:auto;
+  margin-bottom:20px;
+}
+
+.worker-image img{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+.skill{
+  color:#2563eb;
+  font-weight:600;
+  margin:10px 0;
+}
+
+.hire-btn{
+  width:100%;
+  margin-top:20px;
+  background:#2563eb;
+  color:white;
+  border:none;
+  padding:14px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.hire-btn:hover{
+  background:#1d4ed8;
+}
+
+/* ==========================
+   JOBS
+========================== */
+
+.job-grid{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(300px,1fr));
+  gap:25px;
+}
+
+.job-card{
+  background:white;
+  padding:25px;
+  border-radius:20px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.08);
+}
+
+.job-card h3{
+  margin-bottom:10px;
+}
+
+.job-card p{
+  margin-bottom:8px;
+}
+
+.apply-btn{
+  width:100%;
+  margin-top:15px;
+  background:#2563eb;
+  color:white;
+  border:none;
+  padding:12px;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+/* ==========================
+   AUTH FORMS
+========================== */
+
+.auth-section{
+  min-height:80vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:40px;
+}
+
+.auth-box{
+  width:100%;
+  max-width:500px;
+  background:white;
+  padding:40px;
+  border-radius:20px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.08);
+}
+
+.auth-box h2{
+  text-align:center;
+  margin-bottom:25px;
+}
+
+.auth-box form{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+.auth-box input,
+.auth-box select,
+.auth-box textarea{
+  padding:15px;
+  border:1px solid #ddd;
+  border-radius:10px;
+  font-size:16px;
+}
+
+.auth-box textarea{
+  min-height:120px;
+  resize:none;
+}
+
+/* ==========================
+   POST JOB
+========================== */
+
+.post-job{
+  padding:60px 8%;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+  background:#2563eb;
+  color:white;
+  text-align:center;
+  padding:25px;
+  margin-top:50px;
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:768px){
+
+  header{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  nav{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .hero-content h1{
+    font-size:38px;
+  }
+
+  .section-title{
+    font-size:30px;
+  }
+
+}
+.search-box{
+  width:100%;
+  max-width:600px;
+  display:block;
+  margin:30px auto;
+  padding:15px;
+  border-radius:10px;
+  border:1px solid #ddd;
+  font-size:16px;
+}
+/* ==========================
+   ADMIN DASHBOARD
+========================== */
+
+.admin-header{
+  background:#1e40af;
+  color:white;
+}
+
+.admin-header .logo{
+  color:white;
+}
+
+.admin-section{
+  padding:80px 8%;
+}
+
+.admin-grid{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+}
+
+.admin-card{
+  background:white;
+  border-radius:20px;
+  padding:25px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.08);
+}
+
+.admin-card h3{
+  margin-bottom:15px;
+}
+
+.admin-card p{
+  margin-bottom:8px;
+}
+
+/* ==========================
+   ADMIN WORKER CARDS
+========================== */
+
+#adminWorkerContainer{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(300px,1fr));
+  gap:25px;
+}
+
+#adminJobContainer{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(300px,1fr));
+  gap:25px;
+}
+
+/* ==========================
+   ADMIN BUTTONS
+========================== */
+
+.admin-btn{
+  width:100%;
+  border:none;
+  padding:12px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:600;
+  margin-top:10px;
+}
+
+.approve-btn{
+  background:#16a34a;
+  color:white;
+}
+
+.approve-btn:hover{
+  background:#15803d;
+}
+
+.delete-btn{
+  background:#dc2626;
+  color:white;
+}
+
+.delete-btn:hover{
+  background:#b91c1c;
+}
+
+.view-btn{
+  background:#2563eb;
+  color:white;
+}
+
+.view-btn:hover{
+  background:#1d4ed8;
+}
+
+/* ==========================
+   REVENUE CARD COLORS
+========================== */
+
+.revenue-card{
+  border-left:5px solid #16a34a;
+}
+
+.worker-card-admin{
+  border-left:5px solid #2563eb;
+}
+
+.job-card-admin{
+  border-left:5px solid #f59e0b;
+}
+
+/* ==========================
+   FEATURED BADGE
+========================== */
+
+.featured-badge{
+  display:inline-block;
+  background:gold;
+  color:black;
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:14px;
+  font-weight:600;
+  margin-bottom:10px;
+}
+
+/* ==========================
+   PREMIUM BADGE
+========================== */
+
+.premium-badge{
+  display:inline-block;
+  background:#2563eb;
+  color:white;
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:14px;
+  font-weight:600;
+  margin-bottom:10px;
+}
+
+/* ==========================
+   ADMIN TABLE
+========================== */
+
+.admin-table{
+  width:100%;
+  border-collapse:collapse;
+  background:white;
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 6px 20px rgba(0,0,0,0.08);
+}
+
+.admin-table th{
+  background:#2563eb;
+  color:white;
+  padding:15px;
+  text-align:left;
+}
+
+.admin-table td{
+  padding:15px;
+  border-bottom:1px solid #eee;
+}
+
+.admin-table tr:hover{
+  background:#f8fafc;
+}
+
+/* ==========================
+   DARK MODE SUPPORT
+========================== */
+
+body.dark .admin-card,
+body.dark .admin-table,
+body.dark .worker-card,
+body.dark .job-card{
+  background:#1f2937;
+  color:white;
+}
+
+body.dark .admin-table td{
+  border-bottom:1px solid #374151;
+}
+
+body.dark .admin-table tr:hover{
+  background:#374151;
+}
+
+body.dark .featured-badge{
+  color:black;
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:768px){
+
+  #adminWorkerContainer,
+  #adminJobContainer{
+    grid-template-columns:1fr;
+  }
+
+  .admin-table{
+    display:block;
+    overflow-x:auto;
+  }
+
+}
