@@ -5,43 +5,25 @@ if(registerForm){
 
 registerForm.addEventListener(
 "submit",
-function(e){
+async function(e){
 
 e.preventDefault();
+const { error } = await supabase
+  .from("users")
+  .insert([
+    {
+      full_name: user.name,
+      email: user.email,
+      phone: user.phone,
+      role: user.role,
+      password: user.password
+    }
+  ]);
 
-const users =
-JSON.parse(localStorage.getItem("users")) || [];
-
-const user = {
-
-id:Date.now(),
-
-name:
-document.getElementById("fullName").value,
-
-email:
-document.getElementById("email").value,
-
-phone:
-document.getElementById("phone").value,
-
-role:
-document.getElementById("role").value,
-
-password:
-document.getElementById("password").value
-
-};
-
-users.push(user);
-
-localStorage.setItem(
-"users",
-JSON.stringify(users)
-);
-
-alert("Account created!");
-
+if (error) {
+  alert(error.message);
+  return;
+}
 window.location =
 "login.html";
 
@@ -55,7 +37,7 @@ if(loginForm){
 
 loginForm.addEventListener(
 "submit",
-function(e){
+async function(e){
 
 e.preventDefault();
 
@@ -64,21 +46,22 @@ document.getElementById("loginEmail").value;
 
 const password =
 document.getElementById("loginPassword").value;
+const { data, error } = await supabase
+  .from("users")
+  .select("*")
+  .eq("email", email)
+  .eq("password", password)
+  .single();
 
-const users =
-JSON.parse(localStorage.getItem("users")) || [];
-
-const foundUser =
-users.find(user =>
-user.email === email &&
-user.password === password
-);
-
-if(foundUser){
+if(error || !data){
+  alert("Invalid credentials");
+  return;
+}
+if(data){
 
 localStorage.setItem(
 "currentUser",
-JSON.stringify(foundUser)
+JSON.stringify(data)
 );
 
 alert("Login successful");
