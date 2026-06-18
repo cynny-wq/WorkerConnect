@@ -354,14 +354,8 @@ applications.length;
 displayWorkers(workers);
 
 updateStats();
-card.innerHTML +=`
-<button
-class="hire-btn"
-onclick="approveFeatured(${worker.id})"
->
-Approve Featured
-</button>
-`;
+
+
 function approveFeatured(id){
 
 workers.forEach(worker => {
@@ -385,7 +379,10 @@ location.reload();
 const supabaseUrl = "https://flnilikriozyjvkpzuve.supabase.co";
 const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZsbmlsaWtyaW96eWp2a3B6dXZlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA5MjU3MTMsImV4cCI6MjA5NjUwMTcxM30.8xnBN20Vf1hh7zRRqa2zBd0o8j8hsYifw8Xe7yaDii4";
 
-const client = supabase.createClient(supabaseUrl, supabaseKey);
+const supabase = window.supabase.createClient(
+  supabaseUrl,
+  supabaseKey
+);
 
 console.log("Supabase connected!");
 
