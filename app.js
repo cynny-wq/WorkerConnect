@@ -2,39 +2,6 @@
 // WORKERCONNECT APP.JS
 // ==========================
 
-// Load workers
-let workers =
-JSON.parse(localStorage.getItem("workers")) || [
-
-{
-id:1,
-name:"John Kamau",
-skill:"Mason",
-location:"Nairobi",
-phone:"+254712345678",
-rating:4.8,
-reviews:12,
-availability:"Available",
-featured:false,
-premium:false,
-image:"https://i.pravatar.cc/150?img=1"
-},
-
-{
-id:2,
-name:"Grace Wanjiru",
-skill:"Plumber",
-location:"Kiambu",
-phone:"+254723456789",
-rating:4.9,
-reviews:19,
-availability:"Available",
-featured:true,
-premium:true,
-image:"https://i.pravatar.cc/150?img=2"
-}
-
-];
 
 // Save default workers
 localStorage.setItem(
