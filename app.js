@@ -421,10 +421,6 @@ const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS
 const client = supabase.createClient(supabaseUrl, supabaseKey);
 
 console.log("Supabase connected!");
-const supabaseUrl = "YOUR_PROJECT_URL";
-const supabaseKey = "YOUR_ANON_KEY";
-
-const supabase = createClient(supabaseUrl, supabaseKey);
 
 // 🔹 SAVE DATA
 window.addData = async function () {
@@ -447,4 +443,4 @@ window.loadData = async function () {
   document.getElementById("result").innerText =
     JSON.stringify({ data, error }, null, 2);
 };
-</script>
+
