@@ -421,9 +421,6 @@ const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS
 const client = supabase.createClient(supabaseUrl, supabaseKey);
 
 console.log("Supabase connected!");
-<script type="module">
-import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
-
 const supabaseUrl = "YOUR_PROJECT_URL";
 const supabaseKey = "YOUR_ANON_KEY";
 
