@@ -42,11 +42,3 @@ localStorage.setItem(
 "workers",
 JSON.stringify(workers)
 );
-workerCard.innerHTML +=`
-<button
-class="hire-btn"
-onclick="upgradeWorker('${worker.name}')">
-Become Premium
-</button>
-`;
-
