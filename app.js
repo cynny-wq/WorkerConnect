@@ -387,12 +387,14 @@ applications.length;
 displayWorkers(workers);
 
 updateStats();
+card.innerHTML +=`
 <button
 class="hire-btn"
 onclick="approveFeatured(${worker.id})"
 >
 Approve Featured
 </button>
+`;
 function approveFeatured(id){
 
 workers.forEach(worker => {
